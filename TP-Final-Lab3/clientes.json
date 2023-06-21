@@ -8,4 +8,14 @@
   "pedidosId" : [ ],
   "saldo" : 0,
   "activo" : true
+}, {
+  "dni" : "32456",
+  "nombre" : "Toas",
+  "apellido" : "Graa",
+  "edad" : 12,
+  "direccion" : "AAAS",
+  "email" : "FFD",
+  "pedidosId" : [ ],
+  "saldo" : 0,
+  "activo" : true
 } ]

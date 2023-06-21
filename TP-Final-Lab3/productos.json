@@ -20,4 +20,15 @@
   "precioDeVenta" : 2100,
   "stock" : 10,
   "descripcion" : "Fernet Branca de 750cc"
+}, {
+  "id" : 2,
+  "nombre" : "Milanesa",
+  "fechaIngreso" : "2023-06-21",
+  "marca" : "casera",
+  "categoria" : "carniceria",
+  "precioCompra" : 700,
+  "porcentajeDeVenta" : 40,
+  "precioDeVenta" : 980,
+  "stock" : 50,
+  "descripcion" : "Milanesas caseras"
 } ]

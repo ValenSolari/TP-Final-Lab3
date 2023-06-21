@@ -61,4 +61,12 @@ public class AgregarProductoController {
     public void setProduct(Product product) {
         this.product = product;
     }
+
+    public void alert(String titulo,String mensaje){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(titulo);
+        alert.setHeaderText(mensaje);
+
+        alert.showAndWait();
+    }
 }

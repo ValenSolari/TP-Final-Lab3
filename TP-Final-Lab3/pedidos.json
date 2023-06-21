@@ -16,4 +16,13 @@
   "products" : {
     "0" : 6
   }
+}, {
+  "id" : 2,
+  "fecha" : "2023-06-21",
+  "valor" : 2025,
+  "dniCliente" : "1474",
+  "metodoDePago" : "ASD",
+  "products" : {
+    "0" : 3
+  }
 } ]
