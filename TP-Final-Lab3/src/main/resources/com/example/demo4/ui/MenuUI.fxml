@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo4.ui.MenuUI">
+   <children>
+      <GridPane layoutY="-7.0" prefHeight="406.0" prefWidth="100.0" style="-fx-background-color: #91BF9D;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane fx:id="productPane" onMouseClicked="#onProductBottonClick" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #91BF9D;">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Pane>
+            <Label fx:id="productLabel" onMouseClicked="#onProductBottonClick" text="Productos" textFill="#e8e8e8" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="SansSerif" size="16.0" />
+               </font></Label>
+            <Pane fx:id="personPane" layoutX="20.0" layoutY="120.0" onMouseClicked="#onPersonButtonClick" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #91BF9D;" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Pane>
+            <Label fx:id="personLabel" onMouseClicked="#onPersonButtonClick" text="Personas" textFill="#e8e8e8" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="SansSerif" size="16.0" />
+               </font></Label>
+            <Pane fx:id="salesPane" layoutX="10.0" layoutY="210.0" onMouseClicked="#onSalesButtonClick" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #91BF9D;" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Pane>
+            <Label fx:id="salesLabel" text="Ventas" textFill="#e8e8e8" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="SansSerif" size="16.0" />
+               </font></Label>
+         </children>
+      </GridPane>
+      <Separator layoutX="100.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <StackPane fx:id="stackPane" layoutX="100.0" prefHeight="400.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: eceff1;" visible="false">
+               <children>
+                  <GridPane layoutY="14.0" prefHeight="30.0" prefWidth="500.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="197.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="84.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="84.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="84.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TextField fx:id="buscadorProd" prefHeight="16.0" prefWidth="337.0" />
+                        <Button mnemonicParsing="false" text="Buscar" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </Button>
+                        <MenuButton alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Ordenar" GridPane.columnIndex="3" GridPane.halignment="CENTER">
+                          <items>
+                            <MenuItem fx:id="menuItemNombre" mnemonicParsing="false" text="Por Nombre" />
+                            <MenuItem mnemonicParsing="false" text="Por Precio" />
+                          </items>
+                        </MenuButton>
+                        <SplitMenuButton fx:id="splitMenuButton2" mnemonicParsing="false" prefHeight="18.0" prefWidth="89.0" text="Agregar" GridPane.columnIndex="2">
+                           <items>
+                              <MenuItem fx:id="agregarProd" mnemonicParsing="false"  text="Agregar producto" />
+                              <MenuItem fx:id="agregarPedProd" mnemonicParsing="false"  text="Agregar pedido" />
+                           </items>
+                        </SplitMenuButton>
+                     </children>
+                  </GridPane>
+                  <ListView fx:id="listViewProd" layoutX="10.0" layoutY="38.0" prefHeight="362.0" prefWidth="513.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="10.0" right="5.0" />
+               </padding>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: eceff1;" visible="false">
+               <children>
+                  <GridPane layoutY="14.0" prefHeight="30.0" prefWidth="500.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="197.59996337890624" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="84.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="84.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="84.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TextField fx:id="buscadorPers" prefHeight="16.0" prefWidth="337.0" />
+                        <Button alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="26.0" prefWidth="63.0" text="Buscar" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                           </GridPane.margin>
+                        </Button>
+                        <MenuButton alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Ordenar" GridPane.columnIndex="3" GridPane.halignment="CENTER">
+                           <items>
+                              <MenuItem fx:id="menuItenNombre" mnemonicParsing="false" text="Por nombre" />
+                              <MenuItem mnemonicParsing="false" text="Action 2" />
+                           </items>
+                           <GridPane.margin>
+                              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                           </GridPane.margin>
+                        </MenuButton>
+                        <SplitMenuButton fx:id="splitMenuButton" mnemonicParsing="false" prefHeight="18.0" prefWidth="89.0" text="Agregar" GridPane.columnIndex="2">
+                          <items>
+                            <MenuItem fx:id="agregarEmpleado" mnemonicParsing="false" text="Agregar empleado" />
+                            <MenuItem fx:id="agregarCliente" mnemonicParsing="false" text="Agregar cliente" />
+                          </items>
+                           <GridPane.margin>
+                              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                           </GridPane.margin>
+                        </SplitMenuButton>
+                     </children>
+                  </GridPane>
+                  <ListView fx:id="listViewPers" layoutX="10.0" layoutY="38.0" prefHeight="362.0" prefWidth="513.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="10.0" right="5.0" />
+               </padding>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: eceff1;">
+               <children>
+                  <GridPane layoutY="14.0" prefHeight="30.0" prefWidth="500.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="197.59996337890624" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="84.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="84.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="84.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TextField fx:id="buscadorPers1" prefHeight="16.0" prefWidth="337.0" />
+                        <Button alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="26.0" prefWidth="63.0" text="Buscar" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                           </GridPane.margin>
+                        </Button>
+                        <MenuButton alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Ordenar" GridPane.columnIndex="3" GridPane.halignment="CENTER">
+                           <items>
+                              <MenuItem fx:id="menuItenNombre1" mnemonicParsing="false" text="Por nombre" />
+                              <MenuItem mnemonicParsing="false" text="Action 2" />
+                           </items>
+                           <GridPane.margin>
+                              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                           </GridPane.margin>
+                        </MenuButton>
+                        <Button fx:id="agregarPed" alignment="CENTER" mnemonicParsing="false" text="Agregar" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                     </children>
+                  </GridPane>
+                  <ListView fx:id="listViewPed" layoutX="10.0" layoutY="38.0" prefHeight="362.0" prefWidth="513.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="10.0" right="5.0" />
+               </padding>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

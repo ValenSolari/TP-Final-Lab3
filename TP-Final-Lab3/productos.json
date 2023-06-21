@@ -1,0 +1,23 @@
+[ {
+  "id" : 0,
+  "nombre" : "Gaseosa Cola",
+  "fechaIngreso" : "2023-06-08",
+  "marca" : "Coca Cola",
+  "categoria" : "despensa",
+  "precioCompra" : 450,
+  "porcentajeDeVenta" : 50,
+  "precioDeVenta" : 675,
+  "stock" : 20,
+  "descripcion" : "Gaseosa cola marca Coca Cola de 3L"
+}, {
+  "id" : 1,
+  "nombre" : "Fernet",
+  "fechaIngreso" : "2023-06-03",
+  "marca" : "Branca",
+  "categoria" : "despensa",
+  "precioCompra" : 1500,
+  "porcentajeDeVenta" : 40,
+  "precioDeVenta" : 2100,
+  "stock" : 10,
+  "descripcion" : "Fernet Branca de 750cc"
+} ]

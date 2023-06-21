@@ -1,0 +1,12 @@
+[ {
+  "dni" : "44123456",
+  "nombre" : "Jeronimo",
+  "apellido" : "Chipy",
+  "edad" : 20,
+  "direccion" : "Mardel",
+  "email" : "tp@gmail.com",
+  "salario" : 1200,
+  "horasDeTrabajo" : 0,
+  "rol" : "Encargado",
+  "fechaContratacion" : "2023-06-01"
+} ]

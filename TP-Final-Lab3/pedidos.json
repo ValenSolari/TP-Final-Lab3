@@ -1,0 +1,19 @@
+[ {
+  "id" : 0,
+  "fecha" : "2023-06-13",
+  "valor" : 1350,
+  "dniCliente" : "44123456",
+  "metodoDePago" : "Efectivo",
+  "products" : {
+    "0" : 2
+  }
+}, {
+  "id" : 1,
+  "fecha" : "2023-06-09",
+  "valor" : 4050,
+  "dniCliente" : "11223445",
+  "metodoDePago" : "efectivo",
+  "products" : {
+    "0" : 6
+  }
+} ]

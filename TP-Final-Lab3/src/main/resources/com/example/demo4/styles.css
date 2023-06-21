@@ -1,0 +1,16 @@
+.agregar-button {
+    -fx-background-color: #91BF9D; /* Color de fondo */
+    -fx-text-fill: white; /* Color del texto */
+    -fx-font-size: 14px; /* Tamaño de la fuente */
+   /* -fx-font-weight: bold; /* Peso de la fuente */
+    -fx-padding: 2px 16px; /* Espaciado interno */
+    -fx-border-radius: 4px; /* Radio de los bordes */
+}
+
+.agregar-button:hover {
+    -fx-background-color: #ADCFA3; /* Color de fondo al pasar el cursor */
+}
+
+.agregar-button:pressed {
+    -fx-background-color: #3e8e41; /* Color de fondo al hacer clic */
+}
